@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <body>
+      <h3>KÉO BÚA BAO</h3>
+    <button onclick="
+      const user = Math.random();
+      let computer='';
+
+      if(user >= 0 && user < 1/3){
+        computer = 'kéo';
+      }else if(user >= 1/3 && user < 2/3){
+        computer = 'búa';
+      }else if(user >= 2/3 && user <1){
+        computer = 'bao';
+      }
+      console.log(computer)
+      let kq = '';
+
+      if(computer === 'kéo'){
+        kq = 'Hòa';
+      }else if(computer === 'búa'){
+        kq = 'Bạn thua';
+      }else if(computer === 'bao'){
+        kq = 'Bạn Thắng';
+      }
+      alert(`Bạn đã chọn kéo. Máy đã chọn ${computer}. ${kq}`);
+    ">Kéo</button>
+
+    <button onclick="
+    const user1 = Math.random();
+    let computer1='';
+
+    if(user1 >= 0 && user1 < 1/3){
+      computer1 = 'búa';
+    }else if(user1 >= 1/3 && user1 < 2/3){
+      computer1 = 'kéo';
+    }else if(user1 >= 2/3 && user1 <1){
+      computer1 = 'bao';
+    }
+    console.log(computer1)
+    let kq1 = '';
+
+    if(computer1 === 'búa'){
+      kq1 = 'Hòa';
+    }else if(computer1 === 'bao'){
+      kq1 = 'Bạn thua';
+    }else if(computer1 === 'kéo'){
+      kq1 = 'Bạn Thắng';
+    }
+    alert(`Bạn đã chọn búa. Máy đã chọn ${computer1}. ${kq1}`);
+  ">Búa</button>
+
+    <button onclick="
+    const user2 = Math.random();
+    let computer2='';
+
+    if(user2 >= 0 && user2 < 1/3){
+      computer2 = 'bao';
+    }else if(user2 >= 1/3 && user2 < 2/3){
+      computer2 = 'kéo';
+    }else if(user2 >= 2/3 && user2 <1){
+      computer2 = 'búa';
+    }
+    console.log(computer2)
+    let kq2 = '';
+
+    if(computer2 === 'bao'){
+      kq2 = 'Hòa';
+    }else if(computer2 === 'kéo'){
+      kq2 = 'Bạn thua';
+    }else if(computer2 === 'búa'){
+      kq2 = 'Bạn Thắng';
+    }
+    alert(`Bạn đã chọn bao. Máy đã chọn ${computer2}. ${kq2}`);
+  "
+    >Bao</button>
+
+    <p>Phiên bản cuối cùng của project.
+      <a href="6_kbb.html">CLICK HERE</a>
+    </p>
+    <script>
+      // true
+      // false
+
+      // console.log(3>5-5);
+      // console.log(5=== '5.00');
+
+      // if(true){
+      //   console.log('Good');
+      // }else{
+      //   console.log('Bad');
+      // }
+
+      // if(15>=39){
+      //   console.log('WOW');
+      // }else if(15<=21){
+      //   console.log('HUUUUU');
+      // }else{
+      //   console.log('OHH');
+      // }
+
+    </script>
+  </body>
+</html>

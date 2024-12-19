@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+
+<body>
+  <script>
+    //     const pro = {
+    //       name: 'socks',
+    //       price: 1009
+    //     };
+    //     console.log(pro);
+    //     console.log(pro.name);
+    //     // {name: 'socks', price: 1009}
+    //     //  socks
+
+    //     pro.name = 'titan socks';
+    //     console.log(pro);
+    //     // {name: 'titan socks', price: 1009}
+
+    //     pro.pitu = false;
+    //     console.log(pro);
+    // // {name: 'titan socks', price: 1009, pitu: false}
+
+    //     delete pro.pitu;
+    //     console.log(pro);
+    // // {name: 'titan socks', price: 1009}
+
+
+    // const pro = {
+    //   name: 'shirt',
+    //   'deli': '1 day',
+    //   rating: {
+    //     start: 4.5,
+    //     count:87
+    //   },
+    //   fun: function function1(){
+    //     console.log('1235478liyeewb0');
+    //   }
+    // };
+    // console.log(pro);
+    // console.log(pro.name);
+    // console.log(pro['name']);
+    // console.log(pro['deli']);
+
+    // console.log(pro.rating.count);
+
+    // pro.fun();
+
+    // console.log(JSON.stringify(pro));
+
+    // const json = JSON.stringify(pro);
+    // console.log(JSON.parse(json));
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const object1 = {
+      msg: 'hello'
+    };
+    const ob = object1;
+
+    object1.msg = 'Good';
+    console.log(object1);
+    console.log(ob);
+
+    const ob1 = {
+      msg: 'hello'
+    };
+    console.log(ob1 === object1);
+    console.log(ob === object1);
+
+    const ob2 = {
+      msg: 'good job',
+      price: 2548
+    };
+    // const msg = ob2.msg;
+    const { msg, price } = ob2;
+    console.log(msg);
+    console.log(price);
+
+    const ob3 = {
+      msg,
+      // method: function function1(){
+      //   console.log('method');
+      // }
+      method() {
+        console.log('method');
+      }
+    };
+    console.log(ob3);
+    ob3.method();
+
+
+  </script>
+
+</body>
+
+</html>

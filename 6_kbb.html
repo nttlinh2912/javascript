@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kéo búa bao</title>
+  <style>
+    body {
+      background-color: aquamarine;
+      color: rgb(4, 20, 20);
+    }
+
+    img {
+      height: 50px;
+      width: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Kéo Búa Bao</h2>
+  <button onclick="
+   result('keo');
+  ">
+    <img src="kéo.png" class="keo">
+  </button>
+
+  <button onclick="
+      result('bua');">
+    <img src="búa.png" class="bua">
+
+  </button>
+
+  <button onclick="
+    result('bao');">
+    <img src="bao.jpg" class="bao">
+
+  </button>
+  <button>Reset</button>
+  <script>
+    function pickComputer() {
+      const user = Math.random();
+      let computer = '';
+      if (user >= 0 && user < 1 / 3) {
+        computer = 'keo';
+      } else if (user >= 1 / 3 && user < 2 / 3) {
+        computer = 'bua';
+      } else if (user >= 2 / 3 && user < 1) {
+        computer = 'bao';
+      }
+      return computer
+    }
+    function result(para) {
+      const computer = pickComputer();
+
+      let kq = '';
+      if (para === 'keo') {
+        if (computer === 'keo') {
+          kq = 'Hòa';
+        } else if (computer === 'bua') {
+          kq = 'Bạn thua';
+        } else if (computer === 'bao') {
+          kq = 'Bạn Thắng';
+        }
+      } else if (para === 'bua') {
+        if (computer === 'bua') {
+          kq = 'Hòa';
+        } else if (computer === 'bao') {
+          kq = 'Bạn thua';
+        } else if (computer === 'keo') {
+          kq = 'Bạn Thắng';
+        }
+      } else if (para === 'bao') {
+        if (computer === 'bao') {
+          kq = 'Hòa';
+        } else if (computer === 'keo') {
+          kq = 'Bạn thua';
+        } else if (computer === 'bua') {
+          kq = 'Bạn Thắng';
+        }
+      }
+
+      alert(`Bạn đã chọn ${para}. Máy đã chọn ${computer}. ${kq}`);
+    }
+  </script>
+</body>
+
+</html>

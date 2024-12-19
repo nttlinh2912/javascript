@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CART</title>
+</head>
+
+<body>
+  <p>Thêm số lượng giỏ hàng</p>
+  <button onclick="
+    console.log(`Thêm số lượng giỏ hàng: ${cart}`);"
+    >Hiển thị số lượng
+  </button>
+
+  <button onclick="
+    cart = cart+1;
+    console.log(`Thêm số lượng giỏ hàng: ${cart}`);
+  "> Thêm vào giỏ hàng
+  </button>
+
+  <button onclick="
+    cart = cart+2;
+    console.log(`Thêm số lượng giỏ hàng: ${cart}`);"
+    >+2</button>
+
+  <button onclick="
+    cart = cart+3;
+    console.log(`Thêm số lượng giỏ hàng: ${cart}`);"
+  >+3</button>
+
+  <button onclick="
+    if(cart>0){
+      cart = cart-1;
+      console.log(`Thêm số lượng giỏ hàng: ${cart}`);
+    }else{
+      console.log('Không có số lượng tồn tại');
+    }
+    "
+  >-1</button>
+
+  <button onclick="
+    if(cart>0){
+      cart = cart-3;
+      console.log(`Thêm số lượng giỏ hàng: ${cart}`);
+    }else{
+      console.log('Không có số lượng tồn tại');
+    }
+    "
+  >-3</button>
+  <button onclick="
+    cart =0;
+    console.log('Giỏ hàng đã được đặt lại');
+    console.log(`Thêm số lượng giỏ hàng: ${cart}`);"
+  
+  >Đặt lại giỏ hàng</button>
+  <script>
+    let cart = 0;
+  </script>
+</body>
+
+</html>
