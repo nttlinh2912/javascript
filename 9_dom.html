@@ -9,19 +9,37 @@
 
 <body>
   <button>hello</button>
+  <button class="score">score</button>
   <script>
+    console.log(document.querySelector('button').innerHTML);
+
+    document.querySelector('button').innerHTML = 'link';
+
+  
+    console.log(document.querySelector('.score'));
+
+    const button = document.querySelector('.score');
+    console.log(button);
     // // ; để mã này loại bỏ mọi thứ trên trang và
     // //  thay thế nó với dòng chữ mà ta đã nhập
     // document.body.innerHTML = 'hello';
     // //thay đổi tên tiêu đê
     // document.title = 'dom';
-    console.log(document.title);
-    document.title = '9';
+    // console.log(document.title);
+    // document.title = '9';
 
-    console.log(document.body);
+    // console.log(document.body);
 
-    console.log(document.body.innerHTML);
-    document.body.innerHTML = 'link';
+    // console.log(document.body.innerHTML);
+    // document.body.innerHTML = 'link';
+
+    // console.log(document.body);
+    // console.log( typeof document.body);
+
+    // console.log(document.body.innerHTML);
+    // document.body.innerHTML = '<button>GOOGLE</button>';
+    // kiem tra key
+    console.log(event.key);
   </script>
 </body>
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Booleans</title>
+</head>
+
+<body>
+
+  <body>
+    <h3>KÉO BÚA BAO</h3>
+    <button onclick="result('Kéo');">Kéo</button>
+
+    <button onclick="result('Búa');">Búa</button>
+
+    <button onclick="result('Bao')" ;>Bao</button>
+
+    <p class="js-result"></p>
+
+    <p class="js-move"></p>
+
+    <p class="js-score"></p>
+
+    <button onclick="reset();
+      updateScore();
+    ">Reset</button>
+
+    <p>Phiên bản cuối cùng của project.
+      <a href="">CLICK HERE</a>
+    </p>
+    <script>
+      const score = {
+        win: 0,
+        lose: 0,
+        tie: 0
+      };
+
+      function pickComputer() {
+        const user = Math.random();
+        let computer = '';
+        if (user >= 0 && user < 1 / 3) {
+          computer = 'Kéo';
+        } else if (user >= 1 / 3 && user < 2 / 3) {
+          computer = 'Búa';
+        } else if (user >= 2 / 3 && user < 1) {
+          computer = 'Bao';
+        }
+        return computer
+      }
+      function result(para) {
+        const computer = pickComputer();
+
+        let kq = '';
+        if (para === 'Kéo') {
+          if (computer === 'Kéo') {
+            kq = 'Hòa';
+          } else if (computer === 'Búa') {
+            kq = 'Bạn thua';
+          } else if (computer === 'Bao') {
+            kq = 'Bạn thắng';
+          }
+        } else if (para === 'Búa') {
+          if (computer === 'Búa') {
+            kq = 'Hòa';
+          } else if (computer === 'Bao') {
+            kq = 'Bạn thua';
+          } else if (computer === 'Kéo') {
+            kq = 'Bạn thắng';
+          }
+        } else if (para === 'Bao') {
+          if (computer === 'Bao') {
+            kq = 'Hòa';
+          } else if (computer === 'Kéo') {
+            kq = 'Bạn thua';
+          } else if (computer === 'Búa') {
+            kq = 'Bạn thắng';
+          }
+        }
+
+        if (kq === 'Bạn thắng') {
+          score.win += 1;
+        } else if (kq === 'Bạn thua') {
+          score.lose += 1;
+        } else if (kq === 'Hòa') {
+          score.tie += 1;
+        }
+
+        updateScore();
+
+        document.querySelector('.js-result')
+          .innerHTML = kq;
+
+        document.querySelector('.js-move')
+          .innerHTML = `Bạn ${para} - ${computer} Computer `;
+
+        }
+
+      function updateScore(){
+        document.querySelector('.js-score')
+          .innerHTML = `Win:${score.win},
+                        Lose:${score.lose},
+                        Tie:${score.tie}`;
+      }
+
+      function reset() {
+        score.win = 0;
+        score.lose = 0;
+        score.tie = 0;
+      }
+    </script>
+  </body>
+
+</html>
