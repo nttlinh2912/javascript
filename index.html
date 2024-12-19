@@ -6,51 +6,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript</title>
   <style>
-    body {
+    /*body {
       margin: 50px 250px 25px 30px;
-    }
+    }*/
+
+
     p {
       font-size: 18px;
       margin-left: 25px;
     }
+
     span {
       font-size: 18px;
       color: brown;
       font-weight: bold;
     }
-    .anh{
+
+    .anh {
       height: 100px;
       width: 200px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .left,.right {
+      padding: 10px;
+      background-color: rgb(235, 235, 235);
     }
   </style>
 </head>
 
 <body>
-  
   <!-- dấu gạch ngan &mdash; -->
-  <h2>1.JavaScript Basics</h2>
-  <p>-JavaScript là một công nghệ sử dụng để tạo ra các website.
-    <br>-3 công nghệ được sử dụng: HTML,CSS,JavaScript.
-    <br>-Syntax: là những quy tắc mà chúng ta có để tuân theo khi sử dụng một chương trình ngôn ngữ như JavaScript.
-    <br>-Các lệnh cơ bản:
-    <br ><span>+alert('...');</span>Tạo một của sổ hiển thị văn bảng giữa trang, có thể thay đổi nội dung văn bản. Ví dụ:
-    <br><img src="img/code/i_js1.png" class="code">
-    <img src="img/minhhoa/i_jsbasic.png" class="anh">
-    <br><span>+console.log('...');</span>Phương thức sử dụng để hiển thị thông tin hoặc dữ liệu ra bảnh điều khiển (console) của trình duyệt, còn là một công cụ quan trọng để gở lỗi, kiểm tra giá trị của biến. Ví dụ:
-    <br><img src="img/code/i_js1a.png" class="code">
-    <img src="img/minhhoa/i_js1a .png" class="">
-    <br><img src="img/minhhoa/i_js1b.png">
-    <br>-Chú ý: trong <span>console.log('...');</span> nếu đoạn văn bản có dấu nhấy đơn('.') thì cần dùng dấu nhấy kép(".") để tránh sai cú pháp.
-  </p>
-  <h2>2. Numbers and Math</h2>
-  <p>-JavaScript tuân theo thứ tự các phép tính:
-    <br>+ (....)
-    <br>+ [ *  / ]
-    <br>+ [ + -]
-    <br><span>Math.round(...)</span> là hàm kết quả là số đã làm tròn đến số nguyên gần nhất.
-    <br><img src="img/minhhoa/i_js2.png">
-  </p>
-  <h2>3.Strings</h2>
+  <div class="grid">
+    <div class="left">
+      <h2>1.JavaScript Basics</h2>
+      <p>-JavaScript là một công nghệ sử dụng để tạo ra các website.
+        <br>-3 công nghệ được sử dụng: HTML,CSS,JavaScript.
+        <br>-Syntax: là những quy tắc mà chúng ta có để tuân theo khi sử dụng một chương trình ngôn ngữ như JavaScript.
+        <br>-Các lệnh cơ bản:
+        <br><span>+alert('...');</span>Tạo một của sổ hiển thị văn bảng giữa trang, có thể thay đổi nội dung văn bản. Ví
+        dụ:
+        <br><img src="img/code/i_js1.png" class="code">
+        <img src="img/minhhoa/i_jsbasic.png" class="anh">
+        <br><span>+console.log('...');</span>Phương thức sử dụng để hiển thị thông tin hoặc dữ liệu ra bảnh điều khiển
+        (console) của trình duyệt, còn là một công cụ quan trọng để gở lỗi, kiểm tra giá trị của biến. Ví dụ:
+        <br><img src="img/code/i_js1a.png" class="code">
+        <img src="img/minhhoa/i_js1a .png" class="">
+        <br><img src="img/minhhoa/i_js1b.png">
+        <br>-Chú ý: trong <span>console.log('...');</span> nếu đoạn văn bản có dấu nhấy đơn('.') thì cần dùng dấu nhấy
+        kép(".") để tránh sai cú pháp.
+      </p>
+    </div>
+
+    <div class="right">
+      <h2>2. Numbers and Math</h2>
+      <p>-JavaScript tuân theo thứ tự các phép tính:
+        <br>+ (....)
+        <br>+ [ * / ]
+        <br>+ [ + -]
+        <br><span>Math.round(...)</span> là hàm kết quả là số đã làm tròn đến số nguyên gần nhất.
+        <br><img src="img/minhhoa/i_js2.png">
+      </p>
+    </div>
+
+    <div class="left">
+      <h2>3.Strings</h2>
+    </div>
+  </div>
+
+
   <script>
     // console.log("I'm so exhausted, I just want to take a nap.");
   </script>
