@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <style>
+    div {
+      margin-bottom: 75px;
+    }
+
+    .ical{
+      font-size: 15px;
+      padding: 10px;
+
+    }
+
+    .cal{
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .sub {
+      background-color: black;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .isub{
+      background-color: rgb(240,240,240);
+      color: black;
+
+    }
+    body{
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+      subscribe();
+    " class="sub sub">Subscribe
+    </button>
+  </div>
+
+  <div>
+    <p>Kéo Búa Bao</p>
+    <p><a href="kbb/10_kbb.html" target="_blank">Click here</a></p>
+  </div>
+
+  <div>
+    <p>Amazon Shipping Calculator</p>
+    <p>Order under $40 =+$10 shipping.</p>
+    <p>Order over $40 = FREE shipping.</p>
+    <input type="text" placeholder="Cost of order" class="js-cal ical" onkeydown="
+    key(event);
+  ">
+    <button onclick="
+    cal();
+  " class="cal">Calculate</button>
+    <p class="js-total"></p>
+  </div>
+
+  
+  <script>
+    function key(event) {
+      // console.log(event.key);
+      if (event.key === 'Enter') {
+        cal();
+      }
+    }
+
+    function cal() {
+      const input1 = document.querySelector('.js-cal');
+      let cost = Number(input1.value);
+
+      console.log(cost);
+
+      if (cost < 40) {
+        cost += 10;
+      }
+
+      document.querySelector('.js-total').innerHTML = `$${cost}`;
+    }
+
+    function subscribe() {
+      const b1 = document.querySelector('.sub');
+      if (b1.innerHTML === 'Subscribe') {
+        b1.innerHTML = 'Subscribed';
+        b1.classList.add('isub');
+      } else {
+        b1.innerHTML = 'Subscribe';
+        b1.classList.remove('isub');
+      }
+    }
+  </script>
+</body>
+
+</html>
