@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript</title>
   <style>
-    /*body {
-      margin: 50px 250px 25px 30px;
-    }*/
+    body {
+      font-family: Arial;
+    }
 
 
     p {
@@ -33,6 +33,26 @@
     .right {
       padding: 10px;
       background-color: rgb(235, 235, 235);
+    }
+    .phu{
+      font-size: 19px;
+      font-weight: bold;
+    }
+    table{
+      font-size: 15px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td{
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+    th{
+      background-color: gray;
+    }
+    tr:nth-child(even){
+      background-color: rgb(200,200,200);
     }
   </style>
 </head>
@@ -99,26 +119,159 @@
 
     <div class="right">
       <h2>6. Booleans and If-Statements</h2>
-      <p>
+      <p><span>Math.random()</span> tạo một số ngẫu nhiên trong khoảng từ 0 đến 1 [0,1).
+        <br>- Toán tử logic:
+        <br>+ <span>VT && VP</span> sử dụng kiểm tra tất cả biểu thức.
+        <br>+ <span>VT || VP</span> sử dụng kiểm tra ít nhất một biểu thức.
+        <br>+ <span>(!)</span> đảo ngược giá trị Boolean của một biểu thức.
+        <br>- Falsy values: false, 0, '', NaN, undefined, null.
+        <br>- Truthy là bất kỳ giá trị nào trừ danh sách giá trị falsy.
+      </p>
+      <p>Bảng so sánh toán tử (kiểm tra từ VT):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Toán tử</th>
+            <th>Ý nghĩa</th>
+            <th>Falsy</th>
+            <th>Truthy</th>
+            <th>Kết quả</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>VT && VP</td>
+            <td>AND (và)</td>
+            <td>&#10003;</td>
+            <td></td>
+            <td>VT</td>
+          </tr>
+          <tr>
+            <td>VT && VP</td>
+            <td>AND (và)</td>
+            <td></td>
+            <td>&#10003;</td>
+            <td>VP</td>
+          </tr>
+          <tr>
+            <td>VT || VP</td>
+            <td>OR (hoặc)</td>
+            <td>&#10003;</td>
+            <td></td>
+            <td>VP</td>
+          </tr>
+          <tr>
+            <td>VT || VP</td>
+            <td>OR (hoặc)</td>
+            <td></td>
+            <td>&#10003;</td>
+            <td>VT</td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td>NOT (phủ định)</td>
+            <td>&#10003;</td>
+            <td></td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td>NOT (phủ định)</td>
+            <td></td>
+            <td>&#10003;</td>
+            <td>false</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>- Phím tắt câu lệnh if()
+        <br>+ <span>(?:)</span> cách viết tắt câu lệnh if...else để kiểm tra điều kiện và trả về một trong 2 giá trị dựa trên điều kiện đó. Cú pháp <span>ĐKKT(true or false) ? true : false;</span>
+        <br>+ <span>&& (guard)</span> giống như toán tử && ở trên. Cú pháp <span>VT && VP</span>.
+        <br>+ <span>|| (default)</span> giống như toán tử || ở trên. Cú pháp <span>VT || VP</span>.
+      </p>
+      <p><a href="6_booleans.html">website</a></p>
+    </div>
+
+    <div class="left">
+      <h2>7. Functions</h2>
+      <p><a href="kbb/7_kbb.html">website</a></p>
+    </div>
+
+    <div class="right">
+      <h2>8. Objects</h2>
+      <p>Built-in ObjectsObjects:
+        <br>- JSON
+        <br>+ Chuyển đổi JavaScript Object sang JSON:
+        <br><span>JSON.stringify(object or array)</span> 
+        <br>+ Chuyển đổi JSON sang JavaScript:
+        <br><span>JSON.parse()</span>
+        <br>- localStorage
+        <br>+ Thêm dữ liệu vào localStorage: <span>localStorage.setItem('key','value');</span>
+        <br>+ Lấy dữ liệu từ localStorage: <span>localStorage.getItem('key');</span>
+      </p>
+      <p><a href="kbb/8_kbb.html" target="_blank">website</a></p>
+    </div>
+
+    <div class="left">
+      <h2>9. Document Object Model (DOM)</h2>
+      <p>- Các lệnh:
+        <br>+ <span>document.body.innerHTML</span> lấy hoặc thay đổi nội dung HTML bên trong thẻ &lt;body&gt; của tài liệu web.
+        <br>+ <span>document.title</span> lấy hoặc thay đổi tiêu đề của tài liệu web.
+        <br>+ <span>document.querySelector('.class' || '#id' || tag)</span> tìm và chọn một phần tử HTML đầu tiên khớp với selector CSS mà bạn chỉ định.
+        <br>+ <span>.innerText</span> lấy hoặc thay đổi văn bản hiển thị của phần tử (bỏ qua thẻ HTML hoặc nội dung ẩn).
+        <br>+ <span>.value</span> lấy hoặc thay đổi giá trị của các phần thử form như &lt;input&gt;, &lt;textarea&gt; hoặc &lt;select&gt;.
+        <br>+ <span>Number()</span> chuyển đổi giá trị sang kiểu số.
+        <br>+ <span>onkeydown="" || .onkeydown</span> lắng nghe sự kiện nhấn phím trên bàn phím, sự kiện này kích hoạt khi người dùng nhấn phím bất kỳ xuống. <span>event.key</span> trả về tên phím vừa nhấn.
+      </p>
+      <p><a href="9_domp.html" target="_blank">website</a></p>
+    </div>
+
+    <div class="right">
+      <h2>10. HTML, CSS, and JavaScript Together</h2>
+      <p><span>classList.add()</span> thêm một hoặc nhiều lớp CSS vào một phần tử HTML mà không cần ghi đè các lớp hiện tại.
+        <br><span>classList.remove()</span> xóa một hoặc nhiều lớp CSS ra khỏi một phần tử HTML.
+      </p>
+      <p><a href="10_domp.html" target="_blank">website</a></p>
+    </div>
+
+    <div class="left">
+      <h2>11. Arrays and Loops</h2>
+      <p><span>Array.isArray(value)</span> kiểm tra xem một giá trị có phải là một mảng hay không. Phương thức này trả về giá trị true nếu đối số là mảng, và false nếu không.
+        <br><span>.push(e1,e2,...)</span> thêm một hoặc nhiều phần tử vào cuối mảng. Phương thức này thay đổi trực tiếp mảng gốc và trả về độ dài mới của mảng.
+        <br><span>.splice(soindex, slptuxoa, e1,e2....)</span> thêm, xóa hoặc thay thế phần tử trong mảng. Phương thức này thay đổi trực tiếp mảng gốc và trả về một mảng chứa các phần tử đã bị loại bỏ (nếu có).
+        <br><span>while()</span>  thực hiện khối lệnh bên trong vòng lặp miễn là điều kiện kiểm tra trong cặp dấu ngoặc tròn (()) là true.
+        <br><span>for(ktaogtri, DKKT, tggtri)</span> biết trước số lần lặp hoặc cần thực hiện một loạt các hành động lặp đi lặp lại.
+        <br><span></span>
 
       </p>
-    </div>
-
-    <div class="left">
-      <h2>7. </h2>
+      <p><a href="11_arrays.html" target="_blank">website</a></p>
     </div>
 
     <div class="right">
-      <h2>8. </h2>
+      <h2>12. Advanced Functions</h2>
+      <p><span>setTimeout(function, delay, p1,p2,....)</span>  là một hàm được sử dụng để thực thi một đoạn mã hoặc một hàm sau một khoảng thời gian được chỉ định (tính bằng mili giây). Nó thường được sử dụng để trì hoãn một hành động.
+        <br><span>setInterval(function, delay,p1,p2,...)</span> được sử dụng để thực thi một đoạn mã hoặc một hàm lặp đi lặp lại sau mỗi khoảng thời gian nhất định. Đây là công cụ hữu ích khi bạn muốn thực hiện các tác vụ lặp theo chu kỳ, như cập nhật đồng hồ, gửi yêu cầu định kỳ, hoặc tạo hiệu ứng chuyển động.
+        <br><span>clearInterval(intervalId)</span> được sử dụng để dừng một interval (chuỗi lặp) được tạo bởi setInterval(). Khi được gọi với ID của interval, nó sẽ ngăn việc thực thi thêm bất kỳ hành động nào của interval đó.
+        <br><span>forEach()</span> là một phương thức được sử dụng để duyệt qua các phần tử của một mảng. Nó thực thi một hàm được cung cấp trên từng phần tử trong mảng, theo thứ tự.
+        <br><span>addEventListener()</span> là cách gắn trình xử lý sự kiện (event handler) vào một phần tử HTML. Đây là một phương pháp mạnh mẽ và linh hoạt để xử lý các sự kiện như nhấp chuột, nhập bàn phím, di chuột, v.v.
+        <br><span>removeEventListener()</span> được sử dụng để gỡ bỏ một trình xử lý sự kiện (event handler) đã được thêm vào một phần tử HTML bằng addEventListener().
+        <br><span>.filter()</span> được sử dụng để lọc các phần tử của một mảng dựa trên một điều kiện cụ thể. Kết quả của .filter() là một mảng mới chỉ chứa các phần tử thoả mãn điều kiện.
+        <br><span>.map()</span> được sử dụng để tạo ra một mảng mới bằng cách chạy một hàm (callback) trên từng phần tử của mảng gốc. Kết quả của hàm callback sẽ trở thành phần tử tương ứng trong mảng mới.
+      </p>
+      <p>
+        <a href="kbb/12_kbb.html" target="_blank">website1</a>
+        <a href="12_arrays.html" target="_blank">website2</a>
+      </p>
+
     </div>
 
     <div class="left">
-      <h2>9. </h2>
-      <p><a href="9_domp.html">website</a></p>
+      <h2>13. Start the Amazon Project and Intro to Git</h2>
+      <p></p>
+      <p></p>
     </div>
 
     <div class="right">
-      <h2>10. </h2>
+      <h2>14. </h2>
     </div>
 
   </div>
@@ -126,6 +279,7 @@
 
   <script>
     // console.log("I'm so exhausted, I just want to take a nap.");
+    
   </script>
 </body>
 
